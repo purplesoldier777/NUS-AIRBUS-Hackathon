@@ -1,0 +1,28 @@
+{
+  "version": "hard-rules-v1",
+  "wake_profile": "legacy-arrival-threshold",
+  "minimum_radar_nm": 3,
+  "wake_nm": {"heavy": {"heavy": 4, "large": 5, "small": 6}, "large": {"small": 4}},
+  "parallel_single_runway_ft": 2500,
+  "protected_reserve_minutes": 45,
+  "storm_clearance_miles": 20,
+  "gate_buffer_minutes": 10,
+  "minimum_turnaround_minutes": 40,
+  "minimum_connection_minutes": 45,
+  "search_horizon_minutes": 480,
+  "source_notes": {
+    "wake": "Legacy arrival profile: small behind heavy uses 6 NM at the threshold, rather than the 5 NM in-trail minimum. Constant-speed final approach simulation; not RECAT/CWT.",
+    "radar": "3 NM conservative demonstration default; all modelled destination arrivals share one approach stream.",
+    "parallel": "Parallel arrival runways less than 2500 ft apart share wake constraints. This is not a complete parallel-approach or departure separation model.",
+    "reserve": "121.639 domestic planning model: destination fuel + required alternate fuel + 45 minutes normal cruise. Final reserve remains protected from planned holding.",
+    "weather": "Assessed route clearance in miles plus closed arrival windows; not a live weather geometry model.",
+    "crew": "Operator-supplied remaining FDP and flight-time budgets; not a full Part 117 report-time/segments/rest/cumulative calculator.",
+    "ground": "10-minute gate buffer, 40-minute minimum turnaround and 45-minute connection time are configurable simulation assumptions."
+  },
+  "sources": [
+    "https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Basic_dtd_2-20-25.pdf",
+    "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121/subpart-U/section-121.639",
+    "https://www.faa.gov/air_traffic/publications/atpubs/aim/aim0701.html",
+    "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-117/section-117.13"
+  ]
+}

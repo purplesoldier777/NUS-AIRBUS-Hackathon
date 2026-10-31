@@ -1,0 +1,381 @@
+{
+  "state_version": 1,
+  "airport": "MSY",
+  "date": "2015-6-26",
+  "base_local_minutes": 1035,
+  "provenance": {
+    "historical": "Flight identities, date, destination, scheduled arrival. Delay causes select the seed only.",
+    "simulated": "ALL fuel, reserve, burn, wake, separation, runway closure, taxiways, stands, crews, equipment, connections and turnaround inputs.",
+    "scope": "Simplified hackathon simulation; not operational aviation guidance or clearance software.",
+    "synthetic_rule_inputs": "Wake, final speed, normal cruise burn, fuel budgets, weather assessments, closures, gate buffers, crew duty budgets, minimum turns and alternate availability are synthetic configuration. Alternate coordinates come from airports.csv; diversion distance uses airport-to-airport great circle, not an observed aircraft position."
+  },
+  "flights": [
+    {
+      "id": "F1",
+      "callsign": "NK985",
+      "origin": "DTW",
+      "eta": 0,
+      "fuel": 3648.7777990245363,
+      "reserve": 1200,
+      "burn_per_min": 40,
+      "wake": "large",
+      "connections": 15,
+      "connection_deadline": 35,
+      "turnaround": 40,
+      "operation": "arrive",
+      "runway": "RWY27",
+      "approach_speed_kts": 140,
+      "cruise_speed_kts": 400,
+      "cruise_burn_per_min": 40,
+      "destination_fuel": 200,
+      "alternate_required": true,
+      "alternate": {
+        "id": "BTR",
+        "position": [
+          30.53316,
+          -91.14963
+        ],
+        "available": true,
+        "availability_source": "Synthetic availability assumption, not live airport status"
+      },
+      "alternate_approach_fuel": 100,
+      "alternate_approach_minutes": 5,
+      "weather": {
+        "assessed": true,
+        "severe": false,
+        "clearance_miles": 25
+      },
+      "next_departure": 55,
+      "next_flight_minutes": 90,
+      "crew_duty_remaining": 660,
+      "crew_flight_remaining": 240,
+      "current_flight_remaining": 10,
+      "connection_departure": 80,
+      "holding_turbulence": 1,
+      "trip_fuel": 200,
+      "crew_duty_elapsed": 120,
+      "original_stand": "G1",
+      "workbook_profile": true
+    },
+    {
+      "id": "F2",
+      "callsign": "WN566",
+      "origin": "BNA",
+      "eta": 0,
+      "fuel": 8773.777799024536,
+      "reserve": 3250,
+      "burn_per_min": 108.33333333333333,
+      "wake": "heavy",
+      "connections": 50,
+      "connection_deadline": 35,
+      "turnaround": 40,
+      "operation": "arrive",
+      "runway": "RWY27",
+      "approach_speed_kts": 140,
+      "cruise_speed_kts": 400,
+      "cruise_burn_per_min": 40,
+      "destination_fuel": 200,
+      "alternate_required": true,
+      "alternate": {
+        "id": "BTR",
+        "position": [
+          30.53316,
+          -91.14963
+        ],
+        "available": true,
+        "availability_source": "Synthetic availability assumption, not live airport status"
+      },
+      "alternate_approach_fuel": 100,
+      "alternate_approach_minutes": 5,
+      "weather": {
+        "assessed": true,
+        "severe": false,
+        "clearance_miles": 25
+      },
+      "next_departure": 55,
+      "next_flight_minutes": 90,
+      "crew_duty_remaining": 660,
+      "crew_flight_remaining": 240,
+      "current_flight_remaining": 10,
+      "connection_departure": 80,
+      "holding_turbulence": 1,
+      "trip_fuel": 200,
+      "crew_duty_elapsed": 120,
+      "original_stand": "G1",
+      "workbook_profile": true
+    },
+    {
+      "id": "F3",
+      "callsign": "US2072",
+      "origin": "CLT",
+      "eta": 7,
+      "fuel": 3648.7777990245363,
+      "reserve": 1200,
+      "burn_per_min": 40,
+      "wake": "large",
+      "connections": 25,
+      "connection_deadline": 42,
+      "turnaround": 40,
+      "operation": "arrive",
+      "runway": "RWY27",
+      "approach_speed_kts": 140,
+      "cruise_speed_kts": 400,
+      "cruise_burn_per_min": 40,
+      "destination_fuel": 200,
+      "alternate_required": true,
+      "alternate": {
+        "id": "BTR",
+        "position": [
+          30.53316,
+          -91.14963
+        ],
+        "available": true,
+        "availability_source": "Synthetic availability assumption, not live airport status"
+      },
+      "alternate_approach_fuel": 100,
+      "alternate_approach_minutes": 5,
+      "weather": {
+        "assessed": true,
+        "severe": false,
+        "clearance_miles": 25
+      },
+      "next_departure": 62,
+      "next_flight_minutes": 90,
+      "crew_duty_remaining": 660,
+      "crew_flight_remaining": 240,
+      "current_flight_remaining": 10,
+      "connection_departure": 87,
+      "holding_turbulence": 1,
+      "trip_fuel": 200,
+      "crew_duty_elapsed": 120,
+      "original_stand": "G1",
+      "workbook_profile": true
+    }
+  ],
+  "atc": {
+    "runway_reopens": 12,
+    "taxi_minutes": 5,
+    "blocked_taxiways": [
+      "T1"
+    ],
+    "taxi_out_minutes": 10,
+    "runways": [
+      {
+        "id": "RWY27",
+        "closed_windows": [],
+        "weather_closed_windows": []
+      },
+      {
+        "id": "RWY28",
+        "closed_windows": [],
+        "weather_closed_windows": []
+      }
+    ],
+    "parallel_pairs": [
+      {
+        "a": "RWY28",
+        "b": "RWY27",
+        "distance_ft": 0
+      }
+    ],
+    "departures": [],
+    "max_runway_ops_per_hour": 36,
+    "background_ops_per_hour": 0,
+    "decision_time": -20
+  },
+  "ground": {
+    "stands": {
+      "G1": {
+        "available": 0,
+        "taxiway": "T2",
+        "route": [
+          "T2"
+        ],
+        "compatible": [
+          "small",
+          "large",
+          "heavy",
+          "super"
+        ],
+        "kind": "gate"
+      },
+      "R1": {
+        "available": 0,
+        "taxiway": "T3",
+        "route": [
+          "T3"
+        ],
+        "compatible": [
+          "small",
+          "large",
+          "heavy",
+          "super"
+        ],
+        "kind": "gate"
+      }
+    },
+    "equipment_ready": 0,
+    "crew_capacity": 1,
+    "crew_shift_end": 480,
+    "total_gates": 30,
+    "available_gate_limit": 2
+  },
+  "rules": {
+    "version": "hard-rules-v1",
+    "wake_profile": "challenge-workbook",
+    "minimum_radar_nm": 3,
+    "wake_nm": {
+      "super": {
+        "heavy": 6,
+        "large": 7,
+        "small": 8
+      },
+      "heavy": {
+        "heavy": 4,
+        "large": 5,
+        "small": 6
+      },
+      "large": {
+        "small": 4
+      },
+      "small": {}
+    },
+    "parallel_single_runway_ft": 2500,
+    "protected_reserve_minutes": 30,
+    "storm_clearance_miles": 20,
+    "gate_buffer_minutes": 10,
+    "minimum_turnaround_minutes": 35,
+    "minimum_connection_minutes": 45,
+    "search_horizon_minutes": 480,
+    "source_notes": {
+      "wake": "Legacy arrival profile: small behind heavy uses 6 NM at the threshold, rather than the 5 NM in-trail minimum. Constant-speed final approach simulation; not RECAT/CWT.",
+      "radar": "3 NM conservative demonstration default; all modelled destination arrivals share one approach stream.",
+      "parallel": "Parallel arrival runways less than 2500 ft apart share wake constraints. This is not a complete parallel-approach or departure separation model.",
+      "reserve": "121.639 domestic planning model: destination fuel + required alternate fuel + 45 minutes normal cruise. Final reserve remains protected from planned holding.",
+      "weather": "Assessed route clearance in miles plus closed arrival windows; not a live weather geometry model.",
+      "crew": "Operator-supplied remaining FDP and flight-time budgets; not a full Part 117 report-time/segments/rest/cumulative calculator.",
+      "ground": "10-minute gate buffer, 40-minute minimum turnaround and 45-minute connection time are configurable simulation assumptions."
+    },
+    "sources": [
+      "https://www.faa.gov/documentLibrary/media/Order/7110.65BB_Basic_dtd_2-20-25.pdf",
+      "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121/subpart-U/section-121.639",
+      "https://www.faa.gov/air_traffic/publications/atpubs/aim/aim0701.html",
+      "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-117/section-117.13"
+    ],
+    "operational_profile": "challenge-workbook-v1",
+    "reserve_burn_basis": "holding",
+    "contingency_fraction": 0.05,
+    "gate_notice_minutes": 20,
+    "ground_overtime_multiplier": 1.5,
+    "departure_wake_seconds": {
+      "super_heavy": 180,
+      "super_large": 180,
+      "super_small": 180,
+      "heavy_heavy": 120,
+      "heavy_large": 120,
+      "heavy_small": 120,
+      "large_small": 60
+    },
+    "departure_default_seconds": 60
+  },
+  "airport_position": [
+    29.99339,
+    -90.25803
+  ],
+  "alternate_options": [
+    {
+      "id": "BTR",
+      "position": [
+        30.53316,
+        -91.14963
+      ],
+      "available": true,
+      "availability_source": "Synthetic availability assumption, not live airport status"
+    },
+    {
+      "id": "GPT",
+      "position": [
+        30.40728,
+        -89.07009
+      ],
+      "available": true,
+      "availability_source": "Synthetic availability assumption, not live airport status"
+    },
+    {
+      "id": "LFT",
+      "position": [
+        30.20528,
+        -91.98766
+      ],
+      "available": true,
+      "availability_source": "Synthetic availability assumption, not live airport status"
+    },
+    {
+      "id": "PIB",
+      "position": [
+        31.46715,
+        -89.33706
+      ],
+      "available": true,
+      "availability_source": "Synthetic availability assumption, not live airport status"
+    },
+    {
+      "id": "MOB",
+      "position": [
+        30.69142,
+        -88.24283
+      ],
+      "available": true,
+      "availability_source": "Synthetic availability assumption, not live airport status"
+    }
+  ],
+  "constraint_sources": {
+    "file": "challenge2_operational_constraints.xlsx",
+    "sha256": "f889ae9e012c36cbbf95a5b0b70a0ae81c1fa9090f07be5f9d0db81520e78211",
+    "airport": "MSY",
+    "airport_limits": {
+      "name": "Louis Armstrong New Orleans International Airport",
+      "row": 39,
+      "runways": 2,
+      "gates": 30,
+      "movements_per_hour": 36,
+      "minimum_turnaround": 35,
+      "spare_gates": 2,
+      "sources": {
+        "runways": "airport_capacity!G39",
+        "gates": "airport_capacity!H39",
+        "movements_per_hour": "airport_capacity!I39",
+        "minimum_turnaround": "airport_capacity!J39",
+        "spare_gates": "airport_capacity!K39"
+      }
+    },
+    "sources": {
+      "runways": "airport_capacity!G39",
+      "gates": "airport_capacity!H39",
+      "movements_per_hour": "airport_capacity!I39",
+      "minimum_turnaround": "airport_capacity!J39",
+      "spare_gates": "airport_capacity!K39",
+      "final_reserve": "fuel_and_crew!B2",
+      "contingency": "fuel_and_crew!B3",
+      "narrowbody_burn": "fuel_and_crew!B4",
+      "widebody_burn": "fuel_and_crew!B5",
+      "spare_fuel": "fuel_and_crew!B6",
+      "crew_max_duty": "fuel_and_crew!B7",
+      "ground_shift": "fuel_and_crew!B8",
+      "gate_notice": "fuel_and_crew!B9",
+      "wake": "wake_separation!A4:D11"
+    },
+    "assumptions": [
+      "Workbook values are synthetic challenge limits, not certified operational data.",
+      "Gate/runway identifiers and close-parallel geometry are conservative model placeholders.",
+      "45 minutes spare fuel interpreted as usable holding ABOVE the protected reserve, destination/alternate and contingency budgets.",
+      "Crew report was 120 minutes before T0; decision occurs at T−20.",
+      "Ground teams, taxi duration, alternate availability and connections are scenario assumptions.",
+      "Daily flying-time budgets remain separate per-flight inputs; the workbook only supplies the 13-hour duty maximum.",
+      "Only disruption traffic is supplied; background movements default to zero and must be entered separately.",
+      "Airport spare gates are the recovery pool; other gates are treated as occupied.",
+      "Trip fuel uses the DOT scheduled-duration/distance estimate when imported; cached preview uses configured destination fuel as a declared proxy."
+    ]
+  },
+  "source_label": "DOT schedule preview · challenge workbook"
+}
